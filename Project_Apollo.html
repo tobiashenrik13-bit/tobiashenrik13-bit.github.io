@@ -8,4 +8,31 @@
     <a href="index.html">Home</a>
     <a href="Doneer.html">Doneer</a>
     <a href="Over_ons.html">Over ons</a>
+    <p>Dit huis is zo gemaakt dat hij automatisch de temperatuur regelt.</p>
+    <p>Want als je dat zelf doet is dat nog wel wat gedoe.</p>
+    <p>Wij probeerden er zo veel mogelijk slimme functies aan dit huis toe te voegen.</p>
+    <p>Zoals airco en een verwarming. Ook op de website zitten leuke dingen.</p>
+    <p>Hier onder kan u de temperatuur in het huis ook zelf regelen.</p>
+
+    <p id="temperatuur">18 graden Celcius</p>
+
+    <button onclick="colder()">Airco</button>
+    <button onclick="warmer()">Verwarming</button>
+
+    <script>
+        let warmth;
+
+        warmth = Number(18);
+        function colder() {
+            warmth -= 1;
+
+            document.getElementById("temperatuur").textContent = warmth + " graden Celcius";
+        }
+
+        function warmer() {
+            warmth += 1;
+
+            document.getElementById("temperatuur").textContent = warmth + " graden Celcius";
+        }
+    </script>
 </body>

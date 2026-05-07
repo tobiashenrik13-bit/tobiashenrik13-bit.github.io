@@ -1,0 +1,110 @@
+<!-- File: snake.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Snake Game</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <script>
+  // Select canvas and set up context
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const grid = 20; // Grid size
+  let count = 0;
+
+  // Snake
+  let snake = [{x: 160, y: 160}];
+  let dx = grid; // moving right initially
+  let dy = 0;
+
+  // Food
+  let food = {x: 320, y: 320};
+
+  // Game loop
+  function gameLoop() {
+    requestAnimationFrame(gameLoop);
+
+    // Slow game loop
+    if (++count < 4) {
+      return;
+    }
+    count = 0;
+
+    // Move snake
+    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    
+    // Wrap snake around edges
+    head.x = (head.x + canvas.width) % canvas.width;
+    head.y = (head.y + canvas.height) % canvas.height;
+
+    // Check collision with self
+    for (let segment of snake) {
+      if (head.x === segment.x && head.y === segment.y) {
+        // Reset game
+        snake = [{x: 160, y: 160}];
+        dx = grid;
+        dy = 0;
+      }
+    }
+
+    snake.unshift(head);
+
+    // Check if food eaten
+    if (head.x === food.x && head.y === food.y) {
+      food.x = Math.floor(Math.random() * (canvas.width / grid)) * grid;
+      food.y = Math.floor(Math.random() * (canvas.height / grid)) * grid;
+    } else {
+      snake.pop(); // Remove tail segment
+    }
+
+    // Clear canvas
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw food
+    ctx.fillStyle = 'red';
+    ctx.fillRect(food.x, food.y, grid-1, grid-1);
+
+    // Draw snake
+    ctx.fillStyle = 'lime';
+    snake.forEach(segment => ctx.fillRect(segment.x, segment.y, grid-1, grid-1));
+  }
+
+  // Keyboard control
+  document.addEventListener('keydown', e => {
+    switch(e.key) {
+      case 'ArrowUp':
+        if (dy === 0) { dx = 0; dy = -grid; }
+        break;
+      case 'ArrowDown':
+        if (dy === 0) { dx = 0; dy = grid; }
+        break;
+      case 'ArrowLeft':
+        if (dx === 0) { dx = -grid; dy = 0; }
+        break;
+      case 'ArrowRight':
+        if (dx === 0) { dx = grid; dy = 0; }
+        break;
+    }
+  });
+
+  // Start game
+  requestAnimationFrame(gameLoop);
+  </script>
+</body>
+</html>

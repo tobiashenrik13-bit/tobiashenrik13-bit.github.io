@@ -28,7 +28,11 @@
             num = Number(num);
 
             // If-else logic
-            if (num < 10) {
+            if (num > 0 && num < 3) {
+                document.getElementById("result").textContent = "Jij bent echt facking arm he?";
+            } else if (num < 0) {
+                document.getElementById("result").textContent = "Probeer jij ons geld te stelen? Daar trap ik niet in!";
+            } else if (num < 10) {
                 document.getElementById("result").textContent = "HOE DURF JE MIJ ZO WEINIG TE GEVEN!!!!";
             } else if (num < 999) {
                 document.getElementById("result").textContent = "GEEF ME MEER!!!";
