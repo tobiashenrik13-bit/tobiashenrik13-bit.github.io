@@ -8,6 +8,18 @@ a.snake {
     text-decoration: none;
 }
 
-h1.snakegame {
-    color:aliceblue;
+a:hover {
+    cursor: text;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    font-size: large;
+}
+
+h2 {
+    font-size:x-large;
 }

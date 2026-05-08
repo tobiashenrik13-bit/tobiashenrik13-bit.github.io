@@ -8,39 +8,13 @@
     <a href="index.html">Home</a>
     <a href="Project_Apollo.html">Project Apollo</a>
     <a href="Over_ons.html">Over ons</a>
+    <p>Wij zouden het zeer fijn vinden als u doneert.</p>
+    <p>Het helpt erg met ons cijfer en is compleet nutteloos.</p>
+    <p>Zeer nuttig.</p>
+    <p>Deze prijzen zijn in euros, wees niet al te gierig.</p>
     <h3>Doneer Hier</h3>
     <input type="number" id="numberInput" placeholder="Hoe veel wil je doneren?">
     <button onclick="checkNumber()">Donate</button>
     <p id="result"></p>
-
-    <script>
-        function checkNumber() {
-            // Get the value from the input field
-            let num = document.getElementById("numberInput").value;
-
-            // Validate input
-            if (num === "") {
-                document.getElementById("result").textContent = "Vul een nummer in.";
-                return;
-            }
-
-            // Convert to number type
-            num = Number(num);
-
-            // If-else logic
-            if (num > 0 && num < 3) {
-                document.getElementById("result").textContent = "Jij bent echt facking arm he?";
-            } else if (num < 0) {
-                document.getElementById("result").textContent = "Probeer jij ons geld te stelen? Daar trap ik niet in!";
-            } else if (num < 10) {
-                document.getElementById("result").textContent = "HOE DURF JE MIJ ZO WEINIG TE GEVEN!!!!";
-            } else if (num < 999) {
-                document.getElementById("result").textContent = "GEEF ME MEER!!!";
-            } else if (num > 99999999999) {
-                document.getElementById("result").textContent = "Je hebt de website gekocht.";
-            } else {
-                document.getElementById("result").textContent = "Bedankt voor het geld!";
-            } 
-        }
-    </script>
+    <script src="Easter_Eggs.js"></script>
 </body>
