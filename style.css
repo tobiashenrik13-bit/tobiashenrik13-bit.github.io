@@ -1,14 +1,26 @@
 body {
-    background-color: rgb(164, 164, 220);
+    background-image: linear-gradient(rgb(164, 164, 220), rgb(76, 58, 58));
     text-align: center;
 }
 
 a.snake {
-    color: black;
+    color: white; /* Binnenkleur */
+    -webkit-text-stroke: 1px black; /* Dikte en kleur van de outline */
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
+    background-color: none;
 }
 
-a:hover {
+a {
+    color: rgb(0, 0, 0); /* Binnenkleur */
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: aliceblue;
+}
+
+a.snake:hover {
     cursor: text;
 }
 
@@ -17,7 +29,10 @@ button {
 }
 
 p {
-    font-size: large;
+    color: white; /* Binnenkleur */
+    -webkit-text-stroke: 1px black; /* Dikte en kleur van de outline */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 h2 {

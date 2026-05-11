@@ -40,3 +40,32 @@ function warmer() {
 
     document.getElementById("temperatuur").textContent = warmth + " graden Celcius";
 }
+
+function zoekpersoon() {
+    let persoon = document.getElementById("persooninput").value;
+
+    let mensen = ["Allam", "Duke", "Tom", "Tobias"];
+
+    if (!mensen.includes(persoon) || persoon === "") {
+        document.getElementById("result1").textContent =
+            "Vul alstublieft een van ons in. (Allam, Duke, Tobias of Tom)";
+    } else {
+        if (persoon === "Allam") {
+            document.getElementById("result1").textContent =
+                "Hier moet text over Allam komen.";
+        }
+        // Voeg hier de rest toe:
+        if (persoon === "Duke") {
+            document.getElementById("result1").textContent =
+                "Hier moet text over Duke komen.";
+        }
+        if (persoon === "Tom") {
+            document.getElementById("result1").textContent =
+                "Hier moet text over Tom komen.";
+        }
+        if (persoon === "Tobias") {
+            document.getElementById("result1").textContent =
+                "Hier moet text over Tobias komen.";
+        }
+    }
+}
