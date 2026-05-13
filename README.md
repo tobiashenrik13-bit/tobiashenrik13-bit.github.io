@@ -8,11 +8,29 @@ It is mainly here to put it online, but if you are intrested you can download th
 New game to search for!
 Can you find the dwarf?
 
-For more games got to <a href="https://tobiasdev2.itch.io/">My itch.io!</a>
+For more games go to <a href="https://tobiasdev2.itch.io/">My itch.io!</a>
 
 <h3>Photos!</h3>
 
 When you search anyone of us you will get a picture!
+
+<h2>Version 4!</h2>
+
+<h3>New Easter Egg!</h3>
+
+Use code: 
+```
+HollowKnightIsGreat!
+```
+For secret interactions!
+
+<h3>Polish!</h3>
+
+The website is update to fix miner bugs.
+
+<h3>New English mode!</h3>
+
+The website now supports English!
 
 <h2>PS</h2>
 
