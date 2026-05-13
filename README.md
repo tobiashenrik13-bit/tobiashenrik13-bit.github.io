@@ -28,10 +28,6 @@ For secret interactions!
 
 The website is update to fix miner bugs.
 
-<h3>New English mode!</h3>
-
-The website now supports English!
-
 <h2>PS</h2>
 
 Note: This is not profesional. This is a simple project for fun.
