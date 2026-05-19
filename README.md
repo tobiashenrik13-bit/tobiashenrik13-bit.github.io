@@ -1,3 +1,9 @@
+<h1>Project Apollo</h1>
+
+Dont forget, the website is in Dutch!
+
+<h2>Version 3!</h2>
+
 <h3>New Game!</h3>
 New game to search for!
 Can you find the dwarf?
