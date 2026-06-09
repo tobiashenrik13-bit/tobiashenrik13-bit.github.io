@@ -103,15 +103,14 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Allam heeft bijvoorbeeld de bedkast gemaakt.";
             document.getElementById("result3").textContent = "De kast die om kan vallen om een bed te worden.";
             document.getElementById("result4").textContent = "Verder waren de fruit kom en de stoelen ook van hem.";
-            img.src = "img/Allam.jpeg";
+            img.src = "Allam.jpeg";
         }
-        // Voeg hier de rest toe:
         if (persoon === "Duke") {
             document.getElementById("result1").textContent = "Samen met Allam zorgt Duke voor de 3d modellen en 'Decoratie' van het huis.";
             document.getElementById("result2").textContent = "Duke was ook zo aardig om zijn 3d-printer beschikbaar te stellen voor dit project.";
             document.getElementById("result3").textContent = "Hierdoor was het een stuk makelijker om alles te printen.";
             document.getElementById("result4").textContent = "";
-            img.src = "img/Duke.jpg";
+            img.src = "Duke.jpg";
         }
 
         if (persoon === "Tom") {
@@ -119,7 +118,7 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Dit betekent dat hij alle functies van het huis heeft gemaakt.";
             document.getElementById("result3").textContent = "Voor dit heeft hij de microbit gebruikt.";
             document.getElementById("result4").textContent = "Ook heeft hij de doos in elkaar gezet.";
-            img.src = "img/Tom.jpeg";
+            img.src = "Tom.jpeg";
         }
 
         if (persoon === "Tobias") {
@@ -127,7 +126,7 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Hij heeft alles gemaakt in verband met de website en is verantwoordelijk voor de website.";
             document.getElementById("result3").textContent = "Voor klachten mail tobiashenrik13@gmail.com. Niet gebruiken voor spam.";
             document.getElementById("result4").textContent = "Voor alle code kunt u naar zijn github profiel: tobiashenrik13-bit.";
-            img.src = "img/Tobias.jpg";
+            img.src = "Tobias.jpg";
             
 
         }
