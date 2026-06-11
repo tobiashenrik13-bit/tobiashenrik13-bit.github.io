@@ -1,5 +1,5 @@
 function checkNumber() {
-    // Get value
+    // Get the value from the input field
     let num = document.getElementById("numberInput").value;
 
     // Validate input
@@ -8,10 +8,10 @@ function checkNumber() {
         return;
     }
 
-    // Make number
+    // Convert to number type
     num = Number(num);
 
-    // Reactions
+    // If-else logic
     if (num == 67) {
         document.getElementById("result").textContent = "Ha, ha 67 heel grappig hoor.";
     } else if (num > 0 && num < 3) {
@@ -28,25 +28,24 @@ function checkNumber() {
         document.getElementById("result").textContent = "Bedankt voor het geld!";
     } 
 }
-let warmth; //Make Var Warmth
+let warmth;
 
-warmth = Number(18); //Make Number
-
-function colder() { //Colder
+warmth = Number(18);
+function colder() {
     warmth -= 1;
 
     document.getElementById("temperatuur").textContent = warmth + " graden Celcius";
     zes7()
 }
 
-function warmer() { //Warmer
+function warmer() {
     warmth += 1;
 
     document.getElementById("temperatuur").textContent = warmth + " graden Celcius";
     zes7()
 }
 
-function zes7() { //Six Seven Function Warmer/colder
+function zes7() {
     if (warmth == 67) {
         document.getElementById("temperatuur").textContent = "Niet grappig.";
     }
@@ -57,39 +56,54 @@ function zoekpersoon() {
 
     let img = document.getElementById("OverOnsimg");
 
+    let game = document.getElementById("SecretGame");
+
     img.width = 700;
     img.height = 400;
 
     let mensen = ["Allam", "Duke", "Tom", "Tobias"];
-
-    //If Empty
     if (persoon == "") {
         document.getElementById("result1").textContent = "Vul iets in.";
-            document.getElementById("result2").textContent = "";
-            document.getElementById("result3").textContent = "";
-            document.getElementById("result4").textContent = "";
-            img.width = 0;
-            img.height = 0;
-            img.src = "";
-    } else if (persoon == 67) { //If 67
+        document.getElementById("result2").textContent = "";
+        document.getElementById("result3").textContent = "";
+        document.getElementById("result4").textContent = "";
+        img.width = 0;
+        img.height = 0;
+        img.src = "";
+    } else if (persoon == 67) {
         document.getElementById("result1").textContent = "Ahum, ahum ahum. 67 zit niet in het team.";
         document.getElementById("result2").textContent = "Vul alsublieft iemand anders in.";
         document.getElementById("result3").textContent = "67 is niet meer grappig.";
+        document.getElementById("result4").textContent = "";
         img.width = 0;
         img.height = 0;
         img.src = "";
-    } else if (!mensen.includes(persoon)) { //If Someone Else
+    } else if (persoon == "HollowKnightIsGreat!") {
+      document.getElementById("result1").textContent = "Goed zo.";
+      document.getElementById("result2").textContent = "";
+      document.getElementById("result3").textContent = "";
+      document.getElementById("result4").textContent = "";
+      game.src= "https://itch.io/embed-upload/16202222?color=b95b33";
+      game.width="1000";
+      game.height="570";
+      img.width = 0;
+      img.height = 0;
+      img.src = "";
+    } else if (!mensen.includes(persoon)) {
         document.getElementById("result1").textContent = "Vul alstublieft een van ons in. (Allam, Duke, Tobias of Tom)";
+        document.getElementById("result2").textContent = "";
+        document.getElementById("result3").textContent = "";
+        document.getElementById("result4").textContent = "";
         img.width = 0;
         img.height = 0;
         img.src = "";
-    } else { // It is one of use
+    } else {
         if (persoon === "Allam") {
             document.getElementById("result1").textContent = "Samen met Duke zorgt Allam voor de 3d modellen en 'Decoratie' van het huis.";
             document.getElementById("result2").textContent = "Allam heeft bijvoorbeeld de bedkast gemaakt.";
             document.getElementById("result3").textContent = "De kast die om kan vallen om een bed te worden.";
             document.getElementById("result4").textContent = "Verder waren de fruit kom en de stoelen ook van hem.";
-            img.src = "img/Allam.jpeg";
+            img.src = "img/Allam";
         }
         if (persoon === "Duke") {
             document.getElementById("result1").textContent = "Samen met Allam zorgt Duke voor de 3d modellen en 'Decoratie' van het huis.";
@@ -113,6 +127,8 @@ function zoekpersoon() {
             document.getElementById("result3").textContent = "Voor klachten mail tobiashenrik13@gmail.com. Niet gebruiken voor spam.";
             document.getElementById("result4").textContent = "Voor alle code kunt u naar zijn github profiel: tobiashenrik13-bit.";
             img.src = "img/Tobias.jpg";
+            
+
         }
     }
 }
