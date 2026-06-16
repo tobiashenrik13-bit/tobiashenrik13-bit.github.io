@@ -67,6 +67,9 @@ function zoekpersoon() {
         document.getElementById("result2").textContent = "";
         document.getElementById("result3").textContent = "";
         document.getElementById("result4").textContent = "";
+        game.src= "";
+        game.width=0;
+        game.height=0;
         img.width = 0;
         img.height = 0;
         img.src = "";
@@ -75,6 +78,9 @@ function zoekpersoon() {
         document.getElementById("result2").textContent = "Vul alsublieft iemand anders in.";
         document.getElementById("result3").textContent = "67 is niet meer grappig.";
         document.getElementById("result4").textContent = "";
+        game.src= "";
+        game.width=0;
+        game.height=0;
         img.width = 0;
         img.height = 0;
         img.src = "";
@@ -84,8 +90,8 @@ function zoekpersoon() {
       document.getElementById("result3").textContent = "";
       document.getElementById("result4").textContent = "";
       game.src= "https://itch.io/embed-upload/16202222?color=b95b33";
-      game.width="1000";
-      game.height="570";
+      game.width=1000;
+      game.height=570;
       img.width = 0;
       img.height = 0;
       img.src = "";
@@ -94,6 +100,9 @@ function zoekpersoon() {
         document.getElementById("result2").textContent = "";
         document.getElementById("result3").textContent = "";
         document.getElementById("result4").textContent = "";
+        game.src= "";
+        game.width=0;
+        game.height=0;
         img.width = 0;
         img.height = 0;
         img.src = "";
@@ -103,6 +112,9 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Allam heeft bijvoorbeeld de bedkast gemaakt.";
             document.getElementById("result3").textContent = "De kast die om kan vallen om een bed te worden.";
             document.getElementById("result4").textContent = "Verder waren de fruit kom en de stoelen ook van hem.";
+            game.src= "";
+            game.width=0;
+            game.height=0;
             img.src = "img/Allam";
         }
         if (persoon === "Duke") {
@@ -110,6 +122,9 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Duke was ook zo aardig om zijn 3d-printer beschikbaar te stellen voor dit project.";
             document.getElementById("result3").textContent = "Hierdoor was het een stuk makelijker om alles te printen.";
             document.getElementById("result4").textContent = "";
+            game.src= "";
+            game.width=0;
+            game.height=0;
             img.src = "img/Duke.jpg";
         }
 
@@ -118,6 +133,9 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Dit betekent dat hij alle functies van het huis heeft gemaakt.";
             document.getElementById("result3").textContent = "Voor dit heeft hij de microbit gebruikt.";
             document.getElementById("result4").textContent = "Ook heeft hij de doos in elkaar gezet.";
+            game.src= "";
+            game.width=0;
+            game.height=0;
             img.src = "img/Tom.jpeg";
         }
 
@@ -126,9 +144,10 @@ function zoekpersoon() {
             document.getElementById("result2").textContent = "Hij heeft alles gemaakt in verband met de website en is verantwoordelijk voor de website.";
             document.getElementById("result3").textContent = "Voor klachten mail tobiashenrik13@gmail.com. Niet gebruiken voor spam.";
             document.getElementById("result4").textContent = "Voor alle code kunt u naar zijn github profiel: tobiashenrik13-bit.";
+            game.src= "";
+            game.width=0;
+            game.height=0;
             img.src = "img/Tobias.jpg";
-            
-
         }
     }
 }
